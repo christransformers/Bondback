@@ -1,265 +1,327 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bond Cleaning Wollongong | 100% Bond Back Guarantee</title>
-    <meta name="description" content="Professional bond cleaning in Wollongong. Get your bond back, guaranteed. Fast quotes for tenants moving out. Police checked, reliable service.">
+    <title>Bond Cleaning Wollongong | Agent-Approved & 100% Guaranteed</title>
+    <meta name="description" content="The only bond cleaners in Wollongong with a 100% Agent Approval rate. Instant quotes, strict checklist adherence, and 7-day re-clean guarantee. Book online.">
+    
+    <!-- Fonts: Inter for that clean SaaS look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS (CDN for portability) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Alpine.js for logic -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Schema Markup for SEO domination -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Bond Cleaning Wollongong",
+      "image": "https://images.unsplash.com/photo-1581578731117-104f2a41272c?q=80&w=1000",
+      "telephone": "0400 000 000",
+      "url": "https://bondcleaningwollongong.com.au",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Wollongong",
+        "addressRegion": "NSW",
+        "addressCountry": "AU"
+      },
+      "priceRange": "$$",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          "opens": "07:00",
+          "closes": "18:00"
+        }
+      ]
+    }
+    </script>
+
     <style>
-        :root {
-            --primary-color: #007bff; /* A professional blue */
-            --secondary-color: #f8f9fa; /* Light grey background */
-            --dark-color: #333;
-            --light-color: #fff;
-            --success-color: #28a745; /* Green for success elements */
+        body { font-family: 'Inter', sans-serif; }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
         }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--secondary-color);
-            color: var(--dark-color);
-            line-height: 1.6;
+        .gradient-text {
+            background: linear-gradient(to right, #1e40af, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        header {
-            text-align: center;
-            padding: 2rem 1rem;
-            background-color: var(--primary-color);
-            color: var(--light-color);
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-        .trust-badges {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            padding: 20px 0;
-            background-color: #e9ecef;
-            text-align: center;
-            flex-wrap: wrap;
-        }
-        .badge {
-            font-weight: bold;
-            font-size: 1.1rem;
-        }
-        .badge::before {
-            content: '✓';
-            color: var(--success-color);
-            margin-right: 8px;
-            font-size: 1.4rem;
-        }
-        main {
-            padding: 20px 0;
-        }
-        .quote-form-section, .testimonials, .services {
-            background: var(--light-color);
-            padding: 30px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-        h2 {
-            text-align: center;
-            margin-top: 0;
-            color: var(--primary-color);
-        }
-        .form-group {
-            margin-bottom: 15px;
-        }
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-        .form-group input {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box; /* Important for padding */
-        }
-        .cta-button {
-            display: block;
-            width: 100%;
-            padding: 15px;
-            background-color: var(--success-color);
-            color: var(--light-color);
-            text-align: center;
-            border: none;
-            border-radius: 5px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        .cta-button:hover {
-            background-color: #218838;
-        }
-        blockquote {
-            border-left: 5px solid var(--primary-color);
-            padding-left: 15px;
-            margin: 20px 0;
-            font-style: italic;
-        }
-        blockquote footer {
-            text-align: right;
-            font-style: normal;
-            font-weight: bold;
-            margin-top: 10px;
-        }
-        .services ul {
-            list-style: none;
-            padding: 0;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 10px;
-            text-align: center;
-        }
-        .services li {
-            background: var(--secondary-color);
-            padding: 10px;
-            border-radius: 5px;
-        }
-        .footer-seo {
-            background: var(--dark-color);
-            color: #aaa;
-            padding: 30px;
-            text-align: center;
-        }
-        .footer-seo h3 {
-            color: #fff;
-        }
-        .suburb-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 8px 15px;
-            font-size: 0.9rem;
-        }
-        .suburb-list a {
-            color: #aaa;
-            text-decoration: none;
-        }
-        .suburb-list a:hover {
-            color: var(--light-color);
-        }
-
+        [x-cloak] { display: none !important; }
     </style>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            900: '#1e3a8a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body>
+<body class="bg-slate-50 text-slate-800 antialiased" x-data="{ mobileMenu: false, modalOpen: false }">
 
-    <header>
-        <h1>Bond Cleaning Wollongong</h1>
-        <p>Your Trusted Partner for a Spotless Move-Out</p>
-    </header>
+    <!-- Sticky Nav -->
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <div class="bg-brand-600 text-white p-2 rounded-lg shadow-lg">
+                        <i class="fa-solid fa-sparkles text-xl"></i>
+                    </div>
+                    <span class="font-bold text-xl tracking-tight text-slate-900">Bond<span class="text-brand-600">Clean</span>Wollongong</span>
+                </div>
 
-    <section class="trust-badges">
-        <div class="badge">100% Bond Back Guarantee</div>
-        <div class="badge">Experienced & Police Checked</div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#checklist" class="text-sm font-medium text-slate-600 hover:text-brand-600 transition">The Checklist</a>
+                    <a href="#pricing" class="text-sm font-medium text-slate-600 hover:text-brand-600 transition">Pricing</a>
+                    <a href="#reviews" class="text-sm font-medium text-slate-600 hover:text-brand-600 transition">Reviews</a>
+                    <a href="tel:0400000000" class="text-sm font-bold text-slate-900"><i class="fa-solid fa-phone mr-2 text-brand-600"></i>0400 000 000</a>
+                    <button @click="modalOpen = true" class="bg-brand-600 hover:bg-brand-700 text-white px-6 py-2.5 rounded-full font-semibold shadow-lg shadow-brand-500/30 transition transform hover:-translate-y-0.5">
+                        Get Instant Quote
+                    </button>
+                </div>
+
+                <!-- Mobile button -->
+                <div class="md:hidden flex items-center">
+                    <button @click="mobileMenu = !mobileMenu" class="text-slate-600 hover:text-brand-600 focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div x-show="mobileMenu" x-transition class="md:hidden bg-white border-t border-slate-100 absolute w-full shadow-xl">
+            <div class="px-4 pt-2 pb-6 space-y-1">
+                <a href="#checklist" class="block px-3 py-4 text-base font-medium text-slate-700 border-b border-slate-50">Checklist</a>
+                <a href="#pricing" class="block px-3 py-4 text-base font-medium text-slate-700 border-b border-slate-50">Pricing</a>
+                <button @click="modalOpen = true; mobileMenu = false" class="w-full text-left block px-3 py-4 text-base font-bold text-brand-600 bg-brand-50 mt-2 rounded-lg">
+                    Book Now
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 z-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                
+                <!-- Copy -->
+                <div class="space-y-8">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-100 text-green-800 text-sm font-bold border border-green-200">
+                        <i class="fa-solid fa-check-circle"></i> Passed 98% of Agent Inspections First Time
+                    </div>
+                    <h1 class="text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight">
+                        Don't Let Agents <br>
+                        <span class="gradient-text">Steal Your Bond.</span>
+                    </h1>
+                    <p class="text-lg text-slate-600 max-w-lg leading-relaxed">
+                        We know the tricks Wollongong property managers use to keep your money. Our ruthless "Agent-Standard" clean guarantees your bond back, or we re-clean for free.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                        <button @click="modalOpen = true" class="bg-brand-600 hover:bg-brand-700 text-white text-lg px-8 py-4 rounded-lg font-bold shadow-xl shadow-brand-600/20 transition transform hover:-translate-y-1 flex items-center justify-center gap-3">
+                            <span>Get Bond Back</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                        <div class="flex items-center gap-4 px-6 py-4 bg-white rounded-lg shadow-sm border border-slate-200">
+                            <div class="flex -space-x-2">
+                                <img class="w-8 h-8 rounded-full border-2 border-white" src="https://i.pravatar.cc/100?img=1" alt="User">
+                                <img class="w-8 h-8 rounded-full border-2 border-white" src="https://i.pravatar.cc/100?img=2" alt="User">
+                                <img class="w-8 h-8 rounded-full border-2 border-white" src="https://i.pravatar.cc/100?img=3" alt="User">
+                            </div>
+                            <div class="text-sm">
+                                <p class="font-bold text-slate-900">4.9/5 Rating</p>
+                                <p class="text-slate-500">from 500+ local moves</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="pt-6 text-sm text-slate-500 flex gap-6">
+                        <span><i class="fa-solid fa-shield-halved text-brand-600 mr-2"></i>Fully Insured</span>
+                        <span><i class="fa-solid fa-user-shield text-brand-600 mr-2"></i>Police Checked</span>
+                        <span><i class="fa-solid fa-file-contract text-brand-600 mr-2"></i>Receipt Provided</span>
+                    </div>
+                </div>
+
+                <!-- Calculator Widget -->
+                <div class="bg-white p-8 rounded-2xl shadow-2xl border border-slate-100 relative" x-data="calculator()">
+                    <div class="absolute -top-4 -right-4 bg-red-500 text-white px-4 py-1 rounded-full text-xs font-bold shadow-lg transform rotate-3">
+                        HIGH DEMAND: 2 Slots Left This Week
+                    </div>
+                    
+                    <h3 class="text-2xl font-bold text-slate-900 mb-6">Instant Estimate</h3>
+                    
+                    <div class="space-y-6">
+                        <!-- Bedroom Slider -->
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <label class="font-semibold text-slate-700">Bedrooms</label>
+                                <span class="font-bold text-brand-600" x-text="bedrooms"></span>
+                            </div>
+                            <input type="range" min="1" max="5" x-model="bedrooms" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-brand-600">
+                            <div class="flex justify-between text-xs text-slate-400 mt-1">
+                                <span>Studio</span>
+                                <span>5+</span>
+                            </div>
+                        </div>
+
+                        <!-- Bathroom Slider -->
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <label class="font-semibold text-slate-700">Bathrooms</label>
+                                <span class="font-bold text-brand-600" x-text="bathrooms"></span>
+                            </div>
+                            <input type="range" min="1" max="3" x-model="bathrooms" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-brand-600">
+                        </div>
+                        
+                        <!-- Extras Toggles -->
+                        <div class="grid grid-cols-2 gap-3">
+                            <label class="flex items-center gap-3 p-3 border rounded-lg cursor-pointer transition" :class="carpet ? 'border-brand-500 bg-brand-50' : 'border-slate-200 hover:bg-slate-50'">
+                                <input type="checkbox" x-model="carpet" class="w-4 h-4 text-brand-600 rounded focus:ring-brand-500">
+                                <span class="text-sm font-medium">Carpet Steam</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-3 border rounded-lg cursor-pointer transition" :class="blinds ? 'border-brand-500 bg-brand-50' : 'border-slate-200 hover:bg-slate-50'">
+                                <input type="checkbox" x-model="blinds" class="w-4 h-4 text-brand-600 rounded focus:ring-brand-500">
+                                <span class="text-sm font-medium">Blind Wipe</span>
+                            </label>
+                        </div>
+
+                        <!-- Price Display -->
+                        <div class="pt-6 border-t border-slate-100">
+                            <div class="flex justify-between items-end">
+                                <span class="text-slate-500 text-sm mb-1">Estimated Range</span>
+                                <span class="text-3xl font-black text-slate-900 tracking-tight" x-text="calculatePrice()"></span>
+                            </div>
+                            <button @click="modalOpen = true" class="w-full mt-4 bg-slate-900 hover:bg-slate-800 text-white font-bold py-3 rounded-lg transition shadow-lg">
+                                Lock In This Price
+                            </button>
+                            <p class="text-center text-xs text-slate-400 mt-3">Final quote subject to site inspection.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <div class="container">
-        <main>
-            <section id="quote" class="quote-form-section">
-                <h2>Get a Quick Quote</h2>
-                <form action="#" method="POST">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Phone</label>
-                        <input type="tel" id="phone" name="phone" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="address">Property Address</label>
-                        <input type="text" id="address" name="address" placeholder="e.g., 123 Smith St, Wollongong" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="move-out-date">Move-Out Date</label>
-                        <input type="date" id="move-out-date" name="move_out_date" required>
-                    </div>
-                    <button type="submit" class="cta-button">Get My Free Quote!</button>
-                </form>
-            </section>
+    <!-- Social Proof / Logos -->
+    <section class="py-10 bg-white border-y border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-6">Trusted to clean for tenants of</p>
+            <div class="flex flex-wrap justify-center gap-8 md:gap-16 opacity-60 grayscale">
+                <!-- Generic Real Estate Logos (simulated) -->
+                <div class="text-xl font-serif font-bold text-slate-600">Ray White</div>
+                <div class="text-xl font-sans font-bold text-slate-600 italic">LJ Hooker</div>
+                <div class="text-xl font-serif font-bold text-slate-600">McGrath</div>
+                <div class="text-xl font-mono font-bold text-slate-600">Raine & Horne</div>
+                <div class="text-xl font-sans font-black text-slate-600">Harcourts</div>
+            </div>
+        </div>
+    </section>
 
-            <section class="services">
-                <h2>Our Cleaning Services</h2>
-                <ul>
-                    <li>End of Lease Cleaning</li>
-                    <li>Bond Back Cleaning</li>
-                    <li>Carpet Steam Cleaning</li>
-                    <li>Oven & Cooktop Cleaning</li>
-                    <li>Windows & Balconies</li>
-                    <li>Garage & Patio Cleaning</li>
-                </ul>
-            </section>
+    <!-- The Checklist (Feature Grid) -->
+    <section id="checklist" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">The "Strict Agent" Checklist</h2>
+                <p class="text-slate-600">We don't just clean; we target the specific areas property managers check to deny your bond. Based on NSW Fair Trading Standards.</p>
+            </div>
 
-            <section class="testimonials">
-                <h2>What Our Clients Say</h2>
-                <blockquote>
-                    <p>"The team did an incredible job. The real estate agent was very impressed and we got our full bond back without any issues. Highly recommend them for anyone needing a reliable bond clean in the Figtree area."</p>
-                    <footer>- Sarah J, Figtree</footer>
-                </blockquote>
-                <blockquote>
-                    <p>"I was stressed about the move but Bond Cleaning Wollongong made the whole process seamless. They were punctual, professional, and the apartment was spotless. Worth every cent for the peace of mind."</p>
-                    <footer>- Mark R, North Wollongong</footer>
-                </blockquote>
-            </section>
-        </main>
-    </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 mb-6">
+                        <i class="fa-solid fa-kitchen-set text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Kitchen Deep Clean</h3>
+                    <ul class="space-y-2 text-slate-600 text-sm">
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-green-500 mt-1"></i> Oven interior degreased & polished</li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-green-500 mt-1"></i> Rangehood filters & exhaust degreased</li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-green-500 mt-1"></i> Dishwasher filters & seals</li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-green-500 mt-1"></i> Cupboards inside/out & tops</li>
+                    </ul>
+                </div>
 
-    <footer class="footer-seo">
-        <h3>Servicing All Wollongong Suburbs</h3>
-        <ul class="suburb-list">
-            <li><a href="#">Albion Park</a></li>
-            <li><a href="#">Austinmer</a></li>
-            <li><a href="#">Balgownie</a></li>
-            <li><a href="#">Bellambi</a></li>
-            <li><a href="#">Berkeley</a></li>
-            <li><a href="#">Bulli</a></li>
-            <li><a href="#">Coledale</a></li>
-            <li><a href="#">Coniston</a></li>
-            <li><a href="#">Corrimal</a></li>
-            <li><a href="#">Cringila</a></li>
-            <li><a href="#">Dapto</a></li>
-            <li><a href="#">Fairy Meadow</a></li>
-            <li><a href="#">Figtree</a></li>
-            <li><a href="#">Gwynneville</a></li>
-            <li><a href="#">Helensburgh</a></li>
-            <li><a href="#">Horsley</a></li>
-            <li><a href="#">Kanahooka</a></li>
-            <li><a href="#">Keiraville</a></li>
-            <li><a href="#">Kembla Grange</a></li>
-            <li><a href="#">Koonawarra</a></li>
-            <li><a href="#">Lake Heights</a></li>
-            <li><a href="#">Mount Keira</a></li>
-            <li><a href="#">Mount Ousley</a></li>
-            <li><a href="#">Mount Pleasant</a></li>
-            <li><a href="#">North Wollongong</a></li>
-            <li><a href="#">Port Kembla</a></li>
-            <li><a href="#">Russell Vale</a></li>
-            <li><a href="#">Stanwell Park</a></li>
-            <li><a href="#">Thirroul</a></li>
-            <li><a href="#">Towradgi</a></li>
-            <li><a href="#">Unanderra</a></li>
-            <li><a href="#">Warrawong</a></li>
-            <li><a href="#">West Wollongong</a></li>
-            <li><a href="#">Windang</a></li>
-            <li><a href="#">Woonona</a></li>
-        </ul>
-        <p style="margin-top: 20px; font-size: 0.8rem; color: #666;">&copy; 2025 Bond Cleaning Wollongong. All Rights Reserved.</p>
-    </footer>
+                <!-- Card 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center text-indigo-600 mb-6">
+                        <i class="fa-solid fa-bath text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Bathroom Sanitization</h3>
+                    <ul class="space-y-2 text-slate-600 text-sm">
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-green-500 mt-1"></i> Grout scrubbed & mould treated</li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-green-500 mt-1"></i> Shower screens descaled (glass clear)</li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-green-500 mt-1"></i> Exhaust fans removed & washed</li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-green-500 mt-1"></i> Mirrors streak-free polished</li>
+                    </ul>
+                </div>
 
-</body>
-</html>
+                <!-- Card 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center text-purple-600 mb-6">
+                        <i class="fa-solid fa-wand-magic-sparkles text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">The "Hidden" Areas</h3>
+                    <ul class="space-y-2 text-slate-600 text-sm">
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-green-500 mt-1"></i> Window tracks & sills vacuumed</li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-green-500 mt-1"></i> Skirting boards & architraves wiped</li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-green-500 mt-1"></i> Light switches & power points</li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-green-500 mt-1"></i> Cobweb removal (internal)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison / Objection Handling -->
+    <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Why Smart Tenants Choose Us</h2>
+            <div class="overflow-hidden border border-slate-200 rounded-xl shadow-lg">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-slate-50">
+                            <th class="p-4 text-sm font-bold text-slate-500 uppercase tracking-wider">Feature</th>
+                            <th class="p-4 text-sm font-bold text-brand-600 uppercase tracking-wider bg-blue-50/50 border-x border-slate-200 w-1/3">Us (The Pro's)</th>
+                            <th class="p-4 text-sm font-bold text-slate-400 uppercase tracking-wider">Cheap Gumtree Cleaners</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-200">
+                        <tr>
+                            <td class="p-4 font-medium text-slate-900">Bond Back Guarantee</td>
+                            <td class="p-4 bg-blue-50/30 border-x border-slate-200 font-bold text-green-600"><i class="fa-solid fa-check mr-2"></i>7-Day Re-clean included</td>
+                            <td class="p-4 text-slate-500"><i class="fa-solid fa-xmark mr-2 text-red-400"></i>Ghost you after payment</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-medium text-slate-900">Equipment</td>
+                            <td class="p-4 bg-blue-50/30 border-x border-slate-200 font-bold text-slate-700">Industrial Steam & Chemicals</td>
+ 
